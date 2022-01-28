@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Origem CSS: Externo, Interno e Inline</title>
+    <style>
+      body {
+        background-color: aquamarine;
+      }
+    </style>
+    <link rel="stylesheet" href="css/externo.css" />
+    <!-- O ultimo a ser processado tem preferencia, no CSS -->
+    <!-- O CSS inline tem preferencia sobre todos -->
+    <!-- de Preferencia a colocar CSS dentro do arquivo -->
+  </head>
+
+  <body style="background-color: coral">
+    <h1>E agora?</h1>
+  </body>
+</html>
