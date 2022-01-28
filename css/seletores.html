@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>CSS Selectors</title>
+    <link rel="stylesheet" href="css/tag.css" />
+    <style>
+      /* 
+      * {
+        color: #ff0;
+        background-color: #f77;
+      } 
+      Seletor Universal
+      */
+      /* 
+      .tag {
+        color: #ff0;
+        background-color: #f77;
+      } 
+      Seletor Classe
+      */
+      /* 
+      #aprovados {
+        color: #ff0;
+        background-color: #f77;
+      } 
+      Seletor ID
+      */
+      /* 
+      #aninhado > div {
+        color: #ff0;
+        background-color: #f77;
+      }  
+      Pegar a div que está diretamente dentro do ID aninhado
+      Passa pros filhos
+      */
+      /* 
+      #aninhado section {
+        color: #ff0;
+        background-color: #f77;
+      } 
+      Pega a section dentro de aninhado, usado quando não está diretamente ligado
+      */
+      /* 
+      p + ul {
+        color: #ff0;
+        background-color: #f77;
+      } 
+      Pega a ul que vem depois de P.
+      tem que ser ligados diretamente
+      */
+      /* 
+      p ~ ol {
+        color: #ff0;
+        background-color: #f77;
+      } 
+      Pega a ol que tem o P como pai, independente de ser filho direto
+      */
+      /* 
+      [feira] {
+        color: #ff0;
+        background-color: #f77;
+      } 
+      Seletor de Atributo
+      [feira=casa] -> Atributo feira com valor casa
+      [feira~=escritorio] -> Os valores estão separados por espaço, colocando "~" ele pega os possiveis valores
+      Os valores "escritorio empresa" separados
+      [feira*=sa] -> Percorre o texto e verifica se "sa" está dentro dos textos
+      caSA / empreSA 
+      */
+
+      /* 
+      span:nth-child(1) {
+        color: #ff0;
+        background-color: #f77;
+      } 
+      Pega o primeiro span que seja filho de alguem "(1)"
+      Neste caso para funcionar coloca-se a tag nolabel, pois o label é o primeiro filho
+      */
+      /* 
+      section > :nth-child(odd) {
+        color: #ff0;
+        background-color: #f77;
+      } 
+      Seleciona os filhos impares "ODD" dentro da section
+      "EVEN" pares
+      utilizado em tabela
+      */
+      /* 
+      section > :nth-child(odd), ul, p {
+        color: #ff0;
+        background-color: #f77;
+      } 
+      Seleciona os filhos impares "ODD" dentro da section
+      "EVEN" pares
+      utilizado em tabela
+      Aplica também para ul, para p, 
+      "espaço" é descendente
+      */
+      /* 
+      section > :nth-child(odd) label {
+        color: #ff0;
+        background-color: #f77;
+      }
+      só aplica para o label do span
+      */
+      /* 
+      section > span:nth-of-type(2) {
+        color: #ff0;
+        background-color: #f77;
+      } 
+      Aplica no segundo "(2)" elemento do tipo span dentro da section
+      no CSS o primeiro elemento é "1" e não "0"
+      */
+
+      /* Escolher sempre o caminho da simplicidade, colocar uma classe por exemplo */
+    </style>
+  </head>
+
+  <body>
+    <div class="tag">
+      <div class="tag">
+        <p class="tag">1</p>
+        <ul class="tag" feira="casa">
+          <li>Arroz</li>
+          <li>Feijão</li>
+        </ul>
+        <ul class="tag" feira="escritorio empresa">
+          <li>Café</li>
+          <li>Água</li>
+        </ul>
+        <ol id="aprovados" class="tag">
+          <li>Maria</li>
+          <li>Pedro</li>
+          <li>Ana</li>
+        </ol>
+        <div id="aninhado" class="tag">
+          <div class="tag">
+            <section class="tag nolabel">
+              <span class="tag">1</span>
+              <p class="tag">2</p>
+              <span class="tag">3</span>
+            </section>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/tag.js"></script>
+  </body>
+</html>
